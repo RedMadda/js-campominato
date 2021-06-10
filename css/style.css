@@ -1,0 +1,216 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html, body{
+    height: 100%;
+    background: #ccc;
+}
+
+#game{
+
+    // Specifying a relative position is important because 
+    // we're using absolute positioning when setting the 
+    // position of child elements (the flower HTML)
+    position: relative;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%);
+    overflow: hidden;
+    transition: background 1s ease-in
+}
+
+.waiting{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    background: #0085ed;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 12px;
+    transition: all .2s ease-in-out;
+  }
+  
+  button:hover {
+    box-shadow: 0 0 30px #fff;
+  }
+}
+
+.scoreboard {
+  
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+  span {
+    display: inline-block;
+    min-width: 120px;
+  }
+
+}
+
+.flower {
+  position: absolute;
+  font-size: 128px;
+  cursor: pointer;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 20px;
+  outline: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+h2{
+    font-size: 64px;
+    color: #fff;
+    text-shadow: 1px 1px #000
+}
+/* tentativi font */
+.font_courier_new{
+    font-family: "Courier New";
+    width: 80%;
+    height: 20vh;
+}
+
+.p1{
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3{
+  font-family: "Lucida Console", "", ;
+}
+
+.font_sweet {font-family: Arial, Helvetica, sans-serif;}
+
+.font_typer{
+    font-family: " Courier New", monospace , serif;
+}
+/* end tentativi font */
+
+
+#header{
+    margin: auto;
+    text-align:center;
+}
+#wrapper_bck{
+    height: 100vh;
+    width:100%;
+    background-image: url("../img/daisy.jpg");
+    background-size: cover;
+}
+
+#wrapper-text-header{
+    padding-top:100px;
+}
+
+
+#myBtn{
+    background-color: rgb(57, 136, 206);
+    border-radius: 5px;
+    padding:10px;
+    margin-top:50px;
+}
+
+.h2{
+    font-size: xx-large;
+    color: rgb(7, 85, 13);
+    font-weight: 700;
+}
+
+/* BEGINNING MODAL */
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-image: url("../img/daisy.jpg");/* Fallback color */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #75aac9;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)0    6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: lightskyblue;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color:  darkgreen;
+  color: white;
+}
+
